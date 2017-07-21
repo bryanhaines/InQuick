@@ -1,0 +1,38 @@
+
+@{
+    ViewData["Title"] = "New Patient";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<a href="http://getbootstrap.com/css/#forms">Forms Reference</a>
+
+<form>
+
+    <div class="form-group-lg">
+        <label for="consultation-date">Date of Consultation:</label>
+        <input type="datetime-local" class="form-control" id="consultation-date" />
+    </div>
+
+    <div class="form-group-lg">
+        <label for="doctor-name">Name of Doctor:</label>
+        <input type="text" class="form-control" id="doctor-name" placeholder="Jane Doe" />
+    </div>
+
+    <div class="form-group-lg">
+        <label for="referred-by">Referred By:</label>
+        <input type="text" class="form-control" id="referred-by" placeholder="John Doe" />
+    </div>
+
+    <div class="form-group-lg">
+        <label for="case-type">Case Type:</label>
+        <input type="text" class="form-control" id="case-type" placeholder="?" />
+    </div>
+
+    <div class="form-group-lg">
+        <label for="problem-details">Details of Injury or Illness (Include date, location, and other details.):</label>
+        <textarea class="form-control" id="problem-details" rows="3" placeholder="Details ..."></textarea>
+    </div>
+
+</form>

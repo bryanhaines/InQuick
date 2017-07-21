@@ -1,0 +1,10 @@
+C:\Users\hainesb\Source\Repos\InQuick\InQuick\InQuick\bin\Debug\netcoreapp1.1\InQuick.deps.json
+C:\Users\hainesb\Source\Repos\InQuick\InQuick\InQuick\bin\Debug\netcoreapp1.1\InQuick.runtimeconfig.json
+C:\Users\hainesb\Source\Repos\InQuick\InQuick\InQuick\bin\Debug\netcoreapp1.1\InQuick.runtimeconfig.dev.json
+C:\Users\hainesb\Source\Repos\InQuick\InQuick\InQuick\bin\Debug\netcoreapp1.1\InQuick.dll
+C:\Users\hainesb\Source\Repos\InQuick\InQuick\InQuick\bin\Debug\netcoreapp1.1\InQuick.pdb
+C:\Users\hainesb\Source\Repos\InQuick\InQuick\InQuick\obj\Debug\netcoreapp1.1\InQuick.csprojResolveAssemblyReference.cache
+C:\Users\hainesb\Source\Repos\InQuick\InQuick\InQuick\obj\Debug\netcoreapp1.1\UserSecretsAssemblyInfo.cs
+C:\Users\hainesb\Source\Repos\InQuick\InQuick\InQuick\obj\Debug\netcoreapp1.1\InQuick.AssemblyInfo.cs
+C:\Users\hainesb\Source\Repos\InQuick\InQuick\InQuick\obj\Debug\netcoreapp1.1\InQuick.dll
+C:\Users\hainesb\Source\Repos\InQuick\InQuick\InQuick\obj\Debug\netcoreapp1.1\InQuick.pdb
