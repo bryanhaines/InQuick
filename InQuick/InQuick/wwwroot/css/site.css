@@ -58,10 +58,37 @@ textarea {
     max-height: 40px;
 }
 
+/*.panel {
+    border: 5px solid red;
+}*/
+
+.panel-heading {
+    color: red !important;
+    background-color: white !important;
+    border: 5px solid red !important;
+    cursor: pointer;
+}
+
+    .panel-heading > h4 {
+        font-weight: bold;
+    }
+
 .center-horizontally {
     margin: auto;
     width: 50%;
     padding: 10px;
+}
+
+#new-patient-accordion {
+    display: inline-block;
+    width: 100%;
+}
+
+fieldset {
+    padding-top: 5px;
+    margin-bottom: 5px;
+    border: 5px solid #efefef;
+    border-radius: 10px;
 }
 
 /* Hide/rearrange for smaller screens */
