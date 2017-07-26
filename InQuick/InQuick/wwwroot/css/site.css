@@ -4,6 +4,19 @@
     background-color: red;
 }
 
+h2 {
+    color: red;
+    font-weight: bold;
+}
+
+fieldset {
+    padding-top: 5px;
+    margin-bottom: 5px;
+    /*border: 5px solid #efefef;*/
+    border: 5px solid rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
@@ -22,17 +35,44 @@ a:visited {
     color: darkred;
 }
 
+a.btn-in-quick:visited {
+    color: red;
+}
+
+.btn-in-quick {
+    color: red;
+    background-color: white;
+    font-weight: bold;
+    border: 5px solid red;
+}
+
+.btn-in-quick:hover {
+    color: white !important;
+    background-color: red;
+    font-weight: bold;
+    border: 5px solid white;
+}
+
 /* Set widths on the form inputs since otherwise they're 100% wide */
-input,
+/*input,
 select,
 textarea {
     max-width: 280px;
-}
+}*/
 
 /* Carousel */
-.carousel-caption p {
-    font-size: 20px;
-    line-height: 1.4;
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+    .carousel-caption p {
+        font-size: 20px;
+        line-height: 1.4;
+    }
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
 }
 
 /* buttons and links extension to use brackets: [ click me ] */
@@ -48,19 +88,10 @@ textarea {
     padding-left: 0.5em;
 }
 
-/* Make .svg files in the carousel display properly in older browsers */
-.carousel-inner .item img[src$=".svg"] {
-    width: 100%;
-}
-
 .navbar-brand > .img-responsive {
     margin-top: -10px;
     max-height: 40px;
 }
-
-/*.panel {
-    border: 5px solid red;
-}*/
 
 .panel-heading {
     color: red !important;
@@ -79,16 +110,26 @@ textarea {
     padding: 10px;
 }
 
+.button-group {
+    /*background-color: rgba(239, 239, 239, 0.5);
+    background-color: #efefef;*/
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.form-control:focus {
+    border-color: red;
+    border-width: 2px;
+}
+
+.img-center {
+    margin: 0 auto;
+}
+
 #new-patient-accordion {
     display: inline-block;
     width: 100%;
-}
-
-fieldset {
-    padding-top: 5px;
-    margin-bottom: 5px;
-    border: 5px solid #efefef;
-    border-radius: 10px;
 }
 
 /* Hide/rearrange for smaller screens */

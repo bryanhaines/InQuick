@@ -13,7 +13,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="wwwroot\images\logo.png" />
     <Content Include="wwwroot\images\name.png" />
+    <Content Include="wwwroot\images\small logo.png" />
     <Content Include="wwwroot\images\small name.png" />
   </ItemGroup>
   <ItemGroup>
