@@ -1,0 +1,595 @@
+@model InQuick.Models.NewPatient
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+<form asp-action="Create">
+
+    <h4>New Patient</h4>
+    <hr />
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <!-- Date of Consultation -->
+    <div class="col-md-6 form-group form-group-lg">
+        <label asp-for="ConsultationDate" class="col-xs-4 control-label"></label>
+        <div class="col-xs-8">
+            <input type="datetime-local" asp-for="ConsultationDate" class="form-control" />
+            <span asp-validation-for="ConsultationDate" class="text-danger"></span>
+        </div>
+    </div>
+
+    <!-- Name of Doctor -->
+    <div class="col-md-6 form-group form-group-lg">
+        <label asp-for="DoctorsName" class="col-xs-4 control-label"></label>
+        <div class="col-xs-8">
+            <input asp-for="DoctorsName" class="form-control" />
+            <span asp-validation-for="DoctorsName" class="text-danger"></span>
+        </div>
+    </div>
+
+    <!-- Referred By -->
+    <div class="col-md-6 form-group form-group-lg">
+        <label asp-for="ReferredBy" class="col-xs-4 control-label"></label>
+        <div class="col-xs-8">
+            <input asp-for="ReferredBy" class="form-control" />
+            <span asp-validation-for="ReferredBy" class="text-danger"></span>
+        </div>
+    </div>
+
+    <!-- Case Type -->
+    <div class="col-md-6 form-group form-group-lg">
+        <label asp-for="CaseType" class="col-xs-4 control-label"></label>
+        <div class="col-xs-8">
+            <input asp-for="CaseType" class="form-control" />
+            <span asp-validation-for="CaseType" class="text-danger"></span>
+        </div>
+    </div>
+
+    <!-- Details of Injury or Illness -->
+    <div class="col-md-6 form-group form-group-lg">
+        <label asp-for="IllnessDetails" class="col-xs-4 control-label"></label>
+        <div class="col-xs-8">
+            <textarea asp-for="IllnessDetails" class="form-control" rows="3" placeholder="Include date, location, and other details."></textarea>
+            <span asp-validation-for="IllnessDetails" class="text-danger"></span>
+        </div>
+    </div>
+
+    <!-- Details of Treatment Administered -->
+    <div class="col-md-6 form-group form-group-lg">
+        <label asp-for="TreatmentDetails" class="col-xs-4 control-label"></label>
+        <div class="col-xs-8">
+            <textarea asp-for="TreatmentDetails" class="form-control" rows="3" placeholder="?"></textarea>
+            <span asp-validation-for="TreatmentDetails" class="text-danger"></span>
+        </div>
+    </div>
+
+    <!-- Accordion -->
+    <div class="panel-group" id="new-patient-accordion" role="tablist" aria-multiselectable="true">
+
+        <!-- Registration Details -->
+        <div class="panel panel-default">
+
+            <div class="panel-heading" role="tab" id="registration-heading" data-toggle="collapse" data-parent="#new-patient-accordion" href="#registration-details">
+                <h4 class="panel-title">Patient Registration Details</h4>
+            </div>
+            <div id="registration-details" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="registration-heading">
+
+                <div class="panel-body">
+
+                    <fieldset>
+
+                        <!-- Name -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="PatientName" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input asp-for="PatientName" class="form-control" />
+                                <span asp-validation-for="PatientName" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- SSN -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="SSN" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input asp-for="SSN" class="form-control" />
+                                <span asp-validation-for="SSN" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- Address -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="PatientStreet" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input asp-for="PatientStreet" class="form-control" />
+                                <span asp-validation-for="PatientStreet" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- City -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="PatientCity" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input asp-for="PatientCity" class="form-control" />
+                                <span asp-validation-for="PatientCity" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- State -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="PatientState" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input asp-for="PatientState" class="form-control" />
+                                <span asp-validation-for="PatientState" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- ZIP -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="PatientZIP" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input asp-for="PatientZIP" class="form-control" />
+                                <span asp-validation-for="PatientZIP" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- Mobile # -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="PatientMobilePhone" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input type="tel" asp-for="PatientMobilePhone" class="form-control" />
+                                <span asp-validation-for="PatientMobilePhone" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- Home # -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="PatientHomePhone" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input type="tel" asp-for="PatientHomePhone" class="form-control" />
+                                <span asp-validation-for="PatientHomePhone" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- Work # -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="PatientWorkPhone" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input type="tel" asp-for="PatientWorkPhone" class="form-control" />
+                                <span asp-validation-for="PatientWorkPhone" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="PatientEmail" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input type="email" asp-for="PatientEmail" class="form-control" />
+                                <span asp-validation-for="PatientEmail" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- Notes & Comments -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="PatientNotes" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <textarea asp-for="PatientNotes" class="form-control" rows="3" placeholder="?"></textarea>
+                                <span asp-validation-for="PatientNotes" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- Instructions -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label for="instructions" class="col-xs-4 control-label">Instructions:</label>
+                            <div class="col-xs-8 text-left" id="instructions">
+                                <div class="checkbox">
+                                    <input asp-for="InstructionsProvided" />
+                                    <label asp-for="InstructionsProvided"></label>
+                                </div>
+                                <div class="checkbox">
+                                    <input asp-for="ReportsAcquired" />
+                                    <label asp-for="ReportsAcquired"></label>
+                                </div>
+                                <div class="checkbox">
+                                    <input asp-for="AppointmentConfirmed" />
+                                    <label asp-for="AppointmentConfirmed"></label>
+                                </div>
+                                <div class="checkbox">
+                                    <input asp-for="PreAuthorizationCompleted" />
+                                    <label asp-for="PreAuthorizationCompleted"></label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </fieldset>
+
+                </div> <!-- end panel-body -->
+
+            </div> <!-- end panel-collapse -->
+
+        </div> <!-- end panel -->
+        <!-- Insurance Details -->
+        <div class="panel panel-default">
+
+            <div class="panel-heading" role="tab" id="insurance-heading" data-toggle="collapse" data-parent="#new-patient-accordion" href="#insurance-details">
+                <h4 class="panel-title">Insurance Details</h4>
+            </div>
+
+            <div id="insurance-details" class="panel-collapse collapse" role="tabpanel" aria-labelledby="insurance-heading">
+
+                <div class="panel-body">
+
+                    <fieldset>
+
+                        <!-- Insured's Name -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="InsuredsName" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input asp-for="InsuredsName" class="form-control" />
+                                <span asp-validation-for="InsuredsName" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- D.O.B. -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="InsuredsDOB" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input type="datetime-local" asp-for="InsuredsDOB" class="form-control" />
+                                <span asp-validation-for="InsuredsDOB" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- Relationship -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="InsuredsRelationshipToPatient" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input asp-for="InsuredsRelationshipToPatient" class="form-control" />
+                                <span asp-validation-for="InsuredsRelationshipToPatient" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- Since -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="InsuredsRelationshipSince" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input type="datetime-local" asp-for="InsuredsRelationshipSince" class="form-control" />
+                                <span asp-validation-for="InsuredsRelationshipSince" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- Employer -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="InsuredsEmployer" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input asp-for="InsuredsEmployer" class="form-control" />
+                                <span asp-validation-for="InsuredsEmployer" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- Phone # -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="EmployersPhone" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input type="tel" asp-for="EmployersPhone" class="form-control" />
+                                <span asp-validation-for="EmployersPhone" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- Address -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="EmployersStreet" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input asp-for="EmployersStreet" class="form-control" />
+                                <span asp-validation-for="EmployersStreet" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- City -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="EmployersCity" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input asp-for="EmployersCity" class="form-control" />
+                                <span asp-validation-for="EmployersCity" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- State -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="EmployersState" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input asp-for="EmployersState" class="form-control" />
+                                <span asp-validation-for="EmployersState" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- ZIP -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="EmployersZip" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input asp-for="EmployersZip" class="form-control" />
+                                <span asp-validation-for="EmployersZip" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- Note -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="EmployersNote" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input asp-for="EmployersNote" class="form-control" />
+                                <span asp-validation-for="EmployersNote" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- Supervisor -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="InsuredsSupervisor" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input asp-for="InsuredsSupervisor" class="form-control" />
+                                <span asp-validation-for="InsuredsSupervisor" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset>
+
+                        <!-- Primary Insurance -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="PrimaryInsuranceProvider" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input asp-for="PrimaryInsuranceProvider" class="form-control" />
+                                <span asp-validation-for="PrimaryInsuranceProvider" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- Phone # -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="PrimaryInsurancePhone" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input type="tel" asp-for="PrimaryInsurancePhone" class="form-control" />
+                                <span asp-validation-for="PrimaryInsurancePhone" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- Insured's ID -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="PrimaryInsuranceID" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input asp-for="PrimaryInsuranceID" class="form-control" />
+                                <span asp-validation-for="PrimaryInsuranceID" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- Address -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="PrimaryInsuranceStreet" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input asp-for="PrimaryInsuranceStreet" class="form-control" />
+                                <span asp-validation-for="PrimaryInsuranceStreet" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- City -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="PrimaryInsuranceCity" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input asp-for="PrimaryInsuranceCity" class="form-control" />
+                                <span asp-validation-for="PrimaryInsuranceCity" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- State -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="PrimaryInsuranceState" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input asp-for="PrimaryInsuranceState" class="form-control" />
+                                <span asp-validation-for="PrimaryInsuranceState" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- ZIP -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="PrimaryInsuranceZIP" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input asp-for="PrimaryInsuranceZIP" class="form-control" />
+                                <span asp-validation-for="PrimaryInsuranceZIP" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- Group # -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="PrimaryInsuranceGroupNumber" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input asp-for="PrimaryInsuranceGroupNumber" class="form-control" />
+                                <span asp-validation-for="PrimaryInsuranceGroupNumber" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- Contact -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="PrimaryInsurancePOC" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input asp-for="PrimaryInsurancePOC" class="form-control" />
+                                <span asp-validation-for="PrimaryInsurancePOC" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- Title -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="PrimaryInsurancePOCTitle" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input asp-for="PrimaryInsurancePOCTitle" class="form-control" />
+                                <span asp-validation-for="PrimaryInsurancePOCTitle" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- Phone # -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="PrimaryInsurancePOCPhone" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input type="tel" asp-for="PrimaryInsurancePOCPhone" class="form-control" />
+                                <span asp-validation-for="PrimaryInsurancePOCPhone" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- Claim # -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="PrimaryInsuranceClaimNumber" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input asp-for="PrimaryInsuranceClaimNumber" class="form-control" />
+                                <span asp-validation-for="PrimaryInsuranceClaimNumber" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- Notes -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="PrimaryInsuranceNotes" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input asp-for="PrimaryInsuranceNotes" class="form-control" />
+                                <span asp-validation-for="PrimaryInsuranceNotes" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset>
+
+                        <!-- Secondary Insurance -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="SecondaryInsuranceProvider" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input asp-for="SecondaryInsuranceProvider" class="form-control" />
+                                <span asp-validation-for="SecondaryInsuranceProvider" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- Phone # -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="SecondaryInsurancePhone" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input type="tel" asp-for="SecondaryInsurancePhone" class="form-control" />
+                                <span asp-validation-for="SecondaryInsurancePhone" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- Insured's ID -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="SecondaryInsuranceID" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input asp-for="SecondaryInsuranceID" class="form-control" />
+                                <span asp-validation-for="SecondaryInsuranceID" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- Address -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="SecondaryInsuranceStreet" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input asp-for="SecondaryInsuranceStreet" class="form-control" />
+                                <span asp-validation-for="SecondaryInsuranceStreet" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- City -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="SecondaryInsuranceCity" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input asp-for="SecondaryInsuranceCity" class="form-control" />
+                                <span asp-validation-for="SecondaryInsuranceCity" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- State -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="SecondaryInsuranceState" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input asp-for="SecondaryInsuranceState" class="form-control" />
+                                <span asp-validation-for="SecondaryInsuranceState" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- ZIP -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="SecondaryInsuranceZIP" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input asp-for="SecondaryInsuranceZIP" class="form-control" />
+                                <span asp-validation-for="SecondaryInsuranceZIP" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- Group # -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="SecondaryInsuranceGroupNumber" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input asp-for="SecondaryInsuranceGroupNumber" class="form-control" />
+                                <span asp-validation-for="SecondaryInsuranceGroupNumber" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- Contact -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="SecondaryInsurancePOC" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input asp-for="SecondaryInsurancePOC" class="form-control" />
+                                <span asp-validation-for="SecondaryInsurancePOC" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- Title -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="SecondaryInsurancePOCTitle" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input asp-for="SecondaryInsurancePOCTitle" class="form-control" />
+                                <span asp-validation-for="SecondaryInsurancePOCTitle" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- Phone # -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="SecondaryInsurancePOCPhone" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input type="tel" asp-for="SecondaryInsurancePOCPhone" class="form-control" />
+                                <span asp-validation-for="SecondaryInsurancePOCPhone" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- Claim # -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="SecondaryInsuranceClaimNumber" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input asp-for="SecondaryInsuranceClaimNumber" class="form-control" />
+                                <span asp-validation-for="SecondaryInsuranceClaimNumber" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- Notes -->
+                        <div class="col-md-6 form-group form-group-lg">
+                            <label asp-for="SecondaryInsuranceNotes" class="col-xs-4 control-label"></label>
+                            <div class="col-xs-8">
+                                <input asp-for="SecondaryInsuranceNotes" class="form-control" />
+                                <span asp-validation-for="SecondaryInsuranceNotes" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                    </fieldset>
+
+                </div> <!-- end panel-body -->
+
+            </div> <!-- end panel-collapse -->
+
+        </div> <!-- end panel -->
+
+    </div> <!-- end panel-group -->
+
+
+
+    <!-- Button Group -->
+    <div class="col-xs-12 decorative-div">
+        <button title="Abandon changes and return to Index page" type="button" onclick="location.href='@Url.Action("Index", "NewPatients")'" class="btn btn-lg btn-in-quick">Cancel</button>
+        <input title="Submit your report" type="submit" value="Create" class="btn btn-lg btn-in-quick" />
+    </div>
+
+</form>

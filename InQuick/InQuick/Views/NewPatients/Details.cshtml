@@ -1,0 +1,373 @@
+@model InQuick.Models.NewPatient
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>NewPatient</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ConsultationDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConsultationDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DoctorsName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DoctorsName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ReferredBy)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ReferredBy)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CaseType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CaseType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IllnessDetails)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IllnessDetails)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TreatmentDetails)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TreatmentDetails)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PatientName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PatientName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SSN)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SSN)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PatientStreet)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PatientStreet)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PatientCity)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PatientCity)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PatientState)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PatientState)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PatientZIP)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PatientZIP)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PatientMobilePhone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PatientMobilePhone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PatientHomePhone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PatientHomePhone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PatientWorkPhone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PatientWorkPhone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PatientEmail)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PatientEmail)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PatientNotes)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PatientNotes)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.InstructionsProvided)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InstructionsProvided)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ReportsAcquired)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ReportsAcquired)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AppointmentConfirmed)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AppointmentConfirmed)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PreAuthorizationCompleted)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PreAuthorizationCompleted)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.InsuredsName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InsuredsName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.InsuredsDOB)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InsuredsDOB)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.InsuredsRelationshipToPatient)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InsuredsRelationshipToPatient)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.InsuredsRelationshipSince)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InsuredsRelationshipSince)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.InsuredsEmployer)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InsuredsEmployer)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployersPhone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmployersPhone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployersStreet)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmployersStreet)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployersCity)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmployersCity)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployersState)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmployersState)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployersZip)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmployersZip)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployersNote)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmployersNote)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.InsuredsSupervisor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InsuredsSupervisor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PrimaryInsuranceProvider)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PrimaryInsuranceProvider)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PrimaryInsurancePhone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PrimaryInsurancePhone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PrimaryInsuranceID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PrimaryInsuranceID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PrimaryInsuranceStreet)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PrimaryInsuranceStreet)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PrimaryInsuranceCity)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PrimaryInsuranceCity)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PrimaryInsuranceState)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PrimaryInsuranceState)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PrimaryInsuranceZIP)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PrimaryInsuranceZIP)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PrimaryInsuranceGroupNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PrimaryInsuranceGroupNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PrimaryInsurancePOC)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PrimaryInsurancePOC)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PrimaryInsurancePOCTitle)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PrimaryInsurancePOCTitle)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PrimaryInsurancePOCPhone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PrimaryInsurancePOCPhone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PrimaryInsuranceClaimNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PrimaryInsuranceClaimNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PrimaryInsuranceNotes)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PrimaryInsuranceNotes)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SecondaryInsuranceProvider)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SecondaryInsuranceProvider)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SecondaryInsurancePhone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SecondaryInsurancePhone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SecondaryInsuranceID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SecondaryInsuranceID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SecondaryInsuranceStreet)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SecondaryInsuranceStreet)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SecondaryInsuranceCity)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SecondaryInsuranceCity)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SecondaryInsuranceState)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SecondaryInsuranceState)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SecondaryInsuranceZIP)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SecondaryInsuranceZIP)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SecondaryInsuranceGroupNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SecondaryInsuranceGroupNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SecondaryInsurancePOC)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SecondaryInsurancePOC)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SecondaryInsurancePOCTitle)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SecondaryInsurancePOCTitle)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SecondaryInsurancePOCPhone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SecondaryInsurancePOCPhone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SecondaryInsuranceClaimNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SecondaryInsuranceClaimNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SecondaryInsuranceNotes)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SecondaryInsuranceNotes)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

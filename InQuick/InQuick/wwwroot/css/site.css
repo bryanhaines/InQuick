@@ -53,6 +53,10 @@ a.btn-in-quick:visited {
     border: 5px solid white;
 }
 
+ul.no-bullets {
+    list-style: none;
+}
+
 /* Set widths on the form inputs since otherwise they're 100% wide */
 /*input,
 select,
@@ -93,10 +97,16 @@ textarea {
     max-height: 40px;
 }
 
+.panel-group {
+    /*border: 5px solid rgba(0, 0, 0, 0.4);
+    border-radius: 10px;*/
+}
+
 .panel-heading {
     color: red !important;
     background-color: white !important;
     border: 5px solid red !important;
+    border-radius: 5px;
     cursor: pointer;
 }
 
@@ -110,12 +120,25 @@ textarea {
     padding: 10px;
 }
 
-.button-group {
+.decorative-div {
     /*background-color: rgba(239, 239, 239, 0.5);
     background-color: #efefef;*/
     background-color: rgba(0, 0, 0, 0.4);
     padding: 5px;
     border-radius: 10px;
+}
+
+.decorative-div > h3 {
+    font-weight: bold;
+    color: white;
+}
+
+.margin-15 {
+    margin: 15px;
+}
+
+.margin-top-15 {
+    margin-top: 15px;
 }
 
 .form-control:focus {

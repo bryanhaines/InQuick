@@ -1,0 +1,384 @@
+@model IEnumerable<InQuick.Models.NewPatient>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a class="btn btn-lg btn-in-quick" asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.ConsultationDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DoctorsName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ReferredBy)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CaseType)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IllnessDetails)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TreatmentDetails)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PatientName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SSN)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PatientStreet)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PatientCity)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PatientState)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PatientZIP)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PatientMobilePhone)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PatientHomePhone)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PatientWorkPhone)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PatientEmail)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PatientNotes)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.InstructionsProvided)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ReportsAcquired)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AppointmentConfirmed)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PreAuthorizationCompleted)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.InsuredsName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.InsuredsDOB)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.InsuredsRelationshipToPatient)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.InsuredsRelationshipSince)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.InsuredsEmployer)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EmployersPhone)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EmployersStreet)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EmployersCity)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EmployersState)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EmployersZip)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EmployersNote)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.InsuredsSupervisor)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PrimaryInsuranceProvider)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PrimaryInsurancePhone)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PrimaryInsuranceID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PrimaryInsuranceStreet)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PrimaryInsuranceCity)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PrimaryInsuranceState)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PrimaryInsuranceZIP)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PrimaryInsuranceGroupNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PrimaryInsurancePOC)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PrimaryInsurancePOCTitle)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PrimaryInsurancePOCPhone)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PrimaryInsuranceClaimNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PrimaryInsuranceNotes)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SecondaryInsuranceProvider)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SecondaryInsurancePhone)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SecondaryInsuranceID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SecondaryInsuranceStreet)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SecondaryInsuranceCity)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SecondaryInsuranceState)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SecondaryInsuranceZIP)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SecondaryInsuranceGroupNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SecondaryInsurancePOC)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SecondaryInsurancePOCTitle)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SecondaryInsurancePOCPhone)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SecondaryInsuranceClaimNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SecondaryInsuranceNotes)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConsultationDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DoctorsName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReferredBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CaseType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IllnessDetails)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TreatmentDetails)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatientName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SSN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatientStreet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatientCity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatientState)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatientZIP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatientMobilePhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatientHomePhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatientWorkPhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatientEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatientNotes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InstructionsProvided)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReportsAcquired)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AppointmentConfirmed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PreAuthorizationCompleted)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InsuredsName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InsuredsDOB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InsuredsRelationshipToPatient)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InsuredsRelationshipSince)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InsuredsEmployer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployersPhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployersStreet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployersCity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployersState)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployersZip)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployersNote)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InsuredsSupervisor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrimaryInsuranceProvider)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrimaryInsurancePhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrimaryInsuranceID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrimaryInsuranceStreet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrimaryInsuranceCity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrimaryInsuranceState)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrimaryInsuranceZIP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrimaryInsuranceGroupNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrimaryInsurancePOC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrimaryInsurancePOCTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrimaryInsurancePOCPhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrimaryInsuranceClaimNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrimaryInsuranceNotes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SecondaryInsuranceProvider)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SecondaryInsurancePhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SecondaryInsuranceID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SecondaryInsuranceStreet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SecondaryInsuranceCity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SecondaryInsuranceState)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SecondaryInsuranceZIP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SecondaryInsuranceGroupNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SecondaryInsurancePOC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SecondaryInsurancePOCTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SecondaryInsurancePOCPhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SecondaryInsuranceClaimNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SecondaryInsuranceNotes)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
