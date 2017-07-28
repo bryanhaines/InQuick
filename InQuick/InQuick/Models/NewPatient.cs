@@ -26,7 +26,7 @@ namespace InQuick.Models
         [Display(Name = "Details of Injury or Illness:")]
         public string IllnessDetails { get; set; }
 
-        [Display(Name = "Details of Treatment Administered:")]
+        [Display(Name = "Details of Treatment:")]
         public string TreatmentDetails { get; set; }
 
         [Display(Name = "Name:")]

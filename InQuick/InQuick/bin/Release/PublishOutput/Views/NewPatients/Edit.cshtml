@@ -1,0 +1,444 @@
+@model InQuick.Models.NewPatient
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit</h2>
+
+<form asp-action="Edit">
+    <div class="form-horizontal">
+        <h4>NewPatient</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="ID" />
+        <div class="form-group">
+            <label asp-for="ConsultationDate" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="ConsultationDate" class="form-control" />
+                <span asp-validation-for="ConsultationDate" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="DoctorsName" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="DoctorsName" class="form-control" />
+                <span asp-validation-for="DoctorsName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ReferredBy" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="ReferredBy" class="form-control" />
+                <span asp-validation-for="ReferredBy" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="CaseType" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="CaseType" class="form-control" />
+                <span asp-validation-for="CaseType" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="IllnessDetails" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="IllnessDetails" class="form-control" />
+                <span asp-validation-for="IllnessDetails" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="TreatmentDetails" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="TreatmentDetails" class="form-control" />
+                <span asp-validation-for="TreatmentDetails" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="PatientName" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="PatientName" class="form-control" />
+                <span asp-validation-for="PatientName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="SSN" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="SSN" class="form-control" />
+                <span asp-validation-for="SSN" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="PatientStreet" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="PatientStreet" class="form-control" />
+                <span asp-validation-for="PatientStreet" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="PatientCity" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="PatientCity" class="form-control" />
+                <span asp-validation-for="PatientCity" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="PatientState" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="PatientState" class="form-control" />
+                <span asp-validation-for="PatientState" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="PatientZIP" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="PatientZIP" class="form-control" />
+                <span asp-validation-for="PatientZIP" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="PatientMobilePhone" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="PatientMobilePhone" class="form-control" />
+                <span asp-validation-for="PatientMobilePhone" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="PatientHomePhone" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="PatientHomePhone" class="form-control" />
+                <span asp-validation-for="PatientHomePhone" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="PatientWorkPhone" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="PatientWorkPhone" class="form-control" />
+                <span asp-validation-for="PatientWorkPhone" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="PatientEmail" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="PatientEmail" class="form-control" />
+                <span asp-validation-for="PatientEmail" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="PatientNotes" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="PatientNotes" class="form-control" />
+                <span asp-validation-for="PatientNotes" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <div class="checkbox">
+                    <input asp-for="InstructionsProvided" />
+                    <label asp-for="InstructionsProvided"></label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <div class="checkbox">
+                    <input asp-for="ReportsAcquired" />
+                    <label asp-for="ReportsAcquired"></label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <div class="checkbox">
+                    <input asp-for="AppointmentConfirmed" />
+                    <label asp-for="AppointmentConfirmed"></label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <div class="checkbox">
+                    <input asp-for="PreAuthorizationCompleted" />
+                    <label asp-for="PreAuthorizationCompleted"></label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="InsuredsName" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="InsuredsName" class="form-control" />
+                <span asp-validation-for="InsuredsName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="InsuredsDOB" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="InsuredsDOB" class="form-control" />
+                <span asp-validation-for="InsuredsDOB" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="InsuredsRelationshipToPatient" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="InsuredsRelationshipToPatient" class="form-control" />
+                <span asp-validation-for="InsuredsRelationshipToPatient" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="InsuredsRelationshipSince" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="InsuredsRelationshipSince" class="form-control" />
+                <span asp-validation-for="InsuredsRelationshipSince" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="InsuredsEmployer" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="InsuredsEmployer" class="form-control" />
+                <span asp-validation-for="InsuredsEmployer" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="EmployersPhone" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="EmployersPhone" class="form-control" />
+                <span asp-validation-for="EmployersPhone" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="EmployersStreet" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="EmployersStreet" class="form-control" />
+                <span asp-validation-for="EmployersStreet" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="EmployersCity" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="EmployersCity" class="form-control" />
+                <span asp-validation-for="EmployersCity" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="EmployersState" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="EmployersState" class="form-control" />
+                <span asp-validation-for="EmployersState" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="EmployersZip" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="EmployersZip" class="form-control" />
+                <span asp-validation-for="EmployersZip" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="EmployersNote" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="EmployersNote" class="form-control" />
+                <span asp-validation-for="EmployersNote" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="InsuredsSupervisor" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="InsuredsSupervisor" class="form-control" />
+                <span asp-validation-for="InsuredsSupervisor" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="PrimaryInsuranceProvider" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="PrimaryInsuranceProvider" class="form-control" />
+                <span asp-validation-for="PrimaryInsuranceProvider" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="PrimaryInsurancePhone" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="PrimaryInsurancePhone" class="form-control" />
+                <span asp-validation-for="PrimaryInsurancePhone" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="PrimaryInsuranceID" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="PrimaryInsuranceID" class="form-control" />
+                <span asp-validation-for="PrimaryInsuranceID" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="PrimaryInsuranceStreet" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="PrimaryInsuranceStreet" class="form-control" />
+                <span asp-validation-for="PrimaryInsuranceStreet" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="PrimaryInsuranceCity" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="PrimaryInsuranceCity" class="form-control" />
+                <span asp-validation-for="PrimaryInsuranceCity" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="PrimaryInsuranceState" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="PrimaryInsuranceState" class="form-control" />
+                <span asp-validation-for="PrimaryInsuranceState" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="PrimaryInsuranceZIP" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="PrimaryInsuranceZIP" class="form-control" />
+                <span asp-validation-for="PrimaryInsuranceZIP" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="PrimaryInsuranceGroupNumber" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="PrimaryInsuranceGroupNumber" class="form-control" />
+                <span asp-validation-for="PrimaryInsuranceGroupNumber" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="PrimaryInsurancePOC" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="PrimaryInsurancePOC" class="form-control" />
+                <span asp-validation-for="PrimaryInsurancePOC" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="PrimaryInsurancePOCTitle" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="PrimaryInsurancePOCTitle" class="form-control" />
+                <span asp-validation-for="PrimaryInsurancePOCTitle" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="PrimaryInsurancePOCPhone" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="PrimaryInsurancePOCPhone" class="form-control" />
+                <span asp-validation-for="PrimaryInsurancePOCPhone" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="PrimaryInsuranceClaimNumber" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="PrimaryInsuranceClaimNumber" class="form-control" />
+                <span asp-validation-for="PrimaryInsuranceClaimNumber" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="PrimaryInsuranceNotes" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="PrimaryInsuranceNotes" class="form-control" />
+                <span asp-validation-for="PrimaryInsuranceNotes" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="SecondaryInsuranceProvider" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="SecondaryInsuranceProvider" class="form-control" />
+                <span asp-validation-for="SecondaryInsuranceProvider" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="SecondaryInsurancePhone" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="SecondaryInsurancePhone" class="form-control" />
+                <span asp-validation-for="SecondaryInsurancePhone" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="SecondaryInsuranceID" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="SecondaryInsuranceID" class="form-control" />
+                <span asp-validation-for="SecondaryInsuranceID" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="SecondaryInsuranceStreet" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="SecondaryInsuranceStreet" class="form-control" />
+                <span asp-validation-for="SecondaryInsuranceStreet" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="SecondaryInsuranceCity" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="SecondaryInsuranceCity" class="form-control" />
+                <span asp-validation-for="SecondaryInsuranceCity" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="SecondaryInsuranceState" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="SecondaryInsuranceState" class="form-control" />
+                <span asp-validation-for="SecondaryInsuranceState" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="SecondaryInsuranceZIP" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="SecondaryInsuranceZIP" class="form-control" />
+                <span asp-validation-for="SecondaryInsuranceZIP" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="SecondaryInsuranceGroupNumber" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="SecondaryInsuranceGroupNumber" class="form-control" />
+                <span asp-validation-for="SecondaryInsuranceGroupNumber" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="SecondaryInsurancePOC" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="SecondaryInsurancePOC" class="form-control" />
+                <span asp-validation-for="SecondaryInsurancePOC" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="SecondaryInsurancePOCTitle" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="SecondaryInsurancePOCTitle" class="form-control" />
+                <span asp-validation-for="SecondaryInsurancePOCTitle" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="SecondaryInsurancePOCPhone" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="SecondaryInsurancePOCPhone" class="form-control" />
+                <span asp-validation-for="SecondaryInsurancePOCPhone" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="SecondaryInsuranceClaimNumber" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="SecondaryInsuranceClaimNumber" class="form-control" />
+                <span asp-validation-for="SecondaryInsuranceClaimNumber" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="SecondaryInsuranceNotes" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="SecondaryInsuranceNotes" class="form-control" />
+                <span asp-validation-for="SecondaryInsuranceNotes" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
