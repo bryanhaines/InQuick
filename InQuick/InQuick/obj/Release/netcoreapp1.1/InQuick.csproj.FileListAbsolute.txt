@@ -7,3 +7,4 @@ C:\Users\hainesb\Source\Repos\InQuick\InQuick\InQuick\obj\Release\netcoreapp1.1\
 C:\Users\hainesb\Source\Repos\InQuick\InQuick\InQuick\obj\Release\netcoreapp1.1\InQuick.AssemblyInfo.cs
 C:\Users\hainesb\Source\Repos\InQuick\InQuick\InQuick\obj\Release\netcoreapp1.1\InQuick.dll
 C:\Users\hainesb\Source\Repos\InQuick\InQuick\InQuick\obj\Release\netcoreapp1.1\InQuick.pdb
+C:\Users\hainesb\Source\Repos\InQuick\InQuick\InQuick\obj\Release\netcoreapp1.1\UserSecretsAssemblyInfo.cs
