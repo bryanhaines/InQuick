@@ -7,7 +7,10 @@
 
 <h2>Create New Patient Registration</h2>
 
-<input id="open-xml-btn" type="file" value="Open XML" class="btn btn-lg btn-in-quick" />
+<label class="btn btn-lg btn-in-quick">
+    Open XML File
+    <input id="open-xml-btn" type="file" />
+</label>
 
 <form asp-action="Create">
 
@@ -19,7 +22,7 @@
         <div class="col-md-6 form-group form-group-lg">
             <label asp-for="ConsultationDate" class="col-xs-4 control-label"></label>
             <div class="col-xs-8">
-                <input type="date" asp-for="ConsultationDate" class="form-control" />
+                <input id="consultation-date" type="date" asp-for="ConsultationDate" class="form-control" />
                 <span asp-validation-for="ConsultationDate" class="text-danger"></span>
             </div>
         </div>
@@ -28,7 +31,7 @@
         <div class="col-md-6 form-group form-group-lg">
             <label asp-for="DoctorsName" class="col-xs-4 control-label"></label>
             <div class="col-xs-8">
-                <input asp-for="DoctorsName" class="form-control" />
+                <input id="doctors-name" asp-for="DoctorsName" class="form-control" />
                 <span asp-validation-for="DoctorsName" class="text-danger"></span>
             </div>
         </div>
@@ -64,7 +67,7 @@
         <div class="col-md-6 form-group form-group-lg">
             <label asp-for="TreatmentDetails" class="col-xs-4 control-label"></label>
             <div class="col-xs-8">
-                <textarea asp-for="TreatmentDetails" class="form-control" rows="3" placeholder="?"></textarea>
+                <textarea id="details-of-treatment" asp-for="TreatmentDetails" class="form-control" rows="3" placeholder="?"></textarea>
                 <span asp-validation-for="TreatmentDetails" class="text-danger"></span>
             </div>
         </div>
@@ -603,9 +606,41 @@
 @section Scripts {
 
     <script type="text/javascript">
-        //$("#open-xml-btn").click(function () {
-            
-        //});
+
+        $(document).ready(function () {
+
+            $("#open-xml-btn").change(function () {
+
+                var file = this.files[0];
+                processXML(file);
+
+                //parser = new DOMParser();
+                //xmlDoc = parser.parseFromString(/*data from file goes here*/, "text/xml");
+
+                //document.getElementById("doctors-name").val(xmlDoc.getElementsByTagName("th")[0].childNodes[0].nodeValue);
+
+                //alert(file.name);
+            });
+
+        });
+
+        function processXML(file) {
+
+            var fileReader = new FileReader();
+
+            fileReader.onload = function (event) {
+                var data = event.target.result;
+
+                parser = new DOMParser();
+                xmlDoc = parser.parseFromString(data, "text/xml");
+                
+                $("#details-of-treatment").val(xmlDoc.getElementsByTagName("th")[0].childNodes[1].text);
+            }
+
+            fileReader.readAsText(file);
+
+        }
+
     </script>
 
 }
