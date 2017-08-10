@@ -2,6 +2,15 @@
   "version": 2,
   "targets": {
     ".NETCoreApp,Version=v1.1": {
+      "BuildBundlerMinifier/2.4.337": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0"
+        },
+        "build": {
+          "build/BuildBundlerMinifier.targets": {}
+        }
+      },
       "Libuv/1.9.1": {
         "type": "package",
         "dependencies": {
@@ -4253,6 +4262,22 @@
     }
   },
   "libraries": {
+    "BuildBundlerMinifier/2.4.337": {
+      "sha512": "lsRy1azgEqqElCwebIp/gsSAyGvHKQTN2Z3v92pJ3O1z4RLafFW0t3oIE4TJmiVVsn9tRN2YlXsPxA7HMW5ZNw==",
+      "type": "package",
+      "path": "buildbundlerminifier/2.4.337",
+      "files": [
+        "build/BuildBundlerMinifier.targets",
+        "buildbundlerminifier.2.4.337.nupkg.sha512",
+        "buildbundlerminifier.nuspec",
+        "tools/net46/BundlerMinifier.dll",
+        "tools/net46/NUglify.dll",
+        "tools/net46/Newtonsoft.Json.dll",
+        "tools/netstandard1.3/BundlerMinifier.dll",
+        "tools/netstandard1.3/NUglify.dll",
+        "tools/netstandard1.3/Newtonsoft.Json.dll"
+      ]
+    },
     "Libuv/1.9.1": {
       "sha512": "uqX2Frwf9PW8MaY7PRNY6HM5BpW1D8oj1EdqzrmbEFD5nH63Yat3aEjN/tws6Tw6Fk7LwmLBvtUh32tTeTaHiA==",
       "type": "package",
@@ -10989,6 +11014,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v1.1": [
+      "BuildBundlerMinifier >= 2.4.337",
       "Microsoft.ApplicationInsights.AspNetCore >= 2.1.1",
       "Microsoft.AspNetCore >= 1.1.2",
       "Microsoft.AspNetCore.Authentication.Cookies >= 1.1.2",
@@ -11099,6 +11125,10 @@
           "Microsoft.AspNetCore.StaticFiles": {
             "target": "Package",
             "version": "1.1.2"
+          },
+          "BuildBundlerMinifier": {
+            "target": "Package",
+            "version": "2.4.337"
           },
           "Newtonsoft.Json": {
             "target": "Package",
