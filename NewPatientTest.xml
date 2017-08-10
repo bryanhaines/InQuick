@@ -1,0 +1,62 @@
+<NewPatient>
+  <ID>7d2ea1b6-7849-43d8-8f2f-7b52a5b136f9</ID>
+  <ConsultationDate>2017-08-10</ConsultationDate>
+  <DoctorsName>Dr. Heller</DoctorsName>
+  <ReferredBy>Dr. Killjoy</ReferredBy>
+  <CaseType>Acute</CaseType>
+  <IllnessDetails>Tib-Fib fx, bi-lat.</IllnessDetails>
+  <TreatmentDetails>Set w/pins on 31-Jul-2017</TreatmentDetails>
+  <PatientName>Lucky Jones</PatientName>
+  <SSN>123456789</SSN>
+  <PatientStreet>123 Bowery Dr.</PatientStreet>
+  <PatientCity>New York</PatientCity>
+  <PatientState>NY</PatientState>
+  <PatientZIP>10002</PatientZIP>
+  <PatientMobilePhone>1234567890</PatientMobilePhone>
+  <PatientHomePhone>1234567890</PatientHomePhone>
+  <PatientWorkPhone>1234567890</PatientWorkPhone>
+  <PatientEmail>notsolucky@someisp.net</PatientEmail>
+  <PatientNotes>Recent string of bad luck</PatientNotes>
+  <InstructionsProvided>true</InstructionsProvided>
+  <ReportsAcquired>false</ReportsAcquired>
+  <AppointmentConfirmed>true</AppointmentConfirmed>
+  <PreAuthorizationCompleted>false</PreAuthorizationCompleted>
+  <InsuredsName>Lucky Jones</InsuredsName>
+  <InsuredsDOB>1980-01-01</InsuredsDOB>
+  <InsuredsRelationshipToPatient>Self</InsuredsRelationshipToPatient>
+  <InsuredsRelationshipSince>1980-01-01</InsuredsRelationshipSince>
+  <InsuredsEmployer>A&amp;L Cesspool Service Corp.</InsuredsEmployer>
+  <EmployersPhone>7187293018</EmployersPhone>
+  <EmployersStreet>38-40 Review Ave</EmployersStreet>
+  <EmployersCity>Long Island City</EmployersCity>
+  <EmployersState>NY</EmployersState>
+  <EmployersZip>11101</EmployersZip>
+  <EmployersNote>Phew!</EmployersNote>
+  <InsuredsSupervisor>Al Longbottom</InsuredsSupervisor>
+  <PrimaryInsuranceProvider>BlueCross BlueShield</PrimaryInsuranceProvider>
+  <PrimaryInsurancePhone>8885198849</PrimaryInsurancePhone>
+  <PrimaryInsuranceID>987654321</PrimaryInsuranceID>
+  <PrimaryInsuranceStreet>15 Metro Tech Center</PrimaryInsuranceStreet>
+  <PrimaryInsuranceCity>New York</PrimaryInsuranceCity>
+  <PrimaryInsuranceState>NY</PrimaryInsuranceState>
+  <PrimaryInsuranceZIP>10008</PrimaryInsuranceZIP>
+  <PrimaryInsuranceGroupNumber>187</PrimaryInsuranceGroupNumber>
+  <PrimaryInsurancePOC>Katie Kravitz</PrimaryInsurancePOC>
+  <PrimaryInsurancePOCTitle>Account Rep</PrimaryInsurancePOCTitle>
+  <PrimaryInsurancePOCPhone>2124766666</PrimaryInsurancePOCPhone>
+  <PrimaryInsuranceClaimNumber>7777777</PrimaryInsuranceClaimNumber>
+  <PrimaryInsuranceNotes>Empire BlueCross BlueShield</PrimaryInsuranceNotes>
+  <SecondaryInsuranceProvider>N/A 1</SecondaryInsuranceProvider>
+  <SecondaryInsurancePhone>N/A 2</SecondaryInsurancePhone>
+  <SecondaryInsuranceID>N/A 3</SecondaryInsuranceID>
+  <SecondaryInsuranceStreet>N/A 4</SecondaryInsuranceStreet>
+  <SecondaryInsuranceCity>N/A 5</SecondaryInsuranceCity>
+  <SecondaryInsuranceState>N/A 6</SecondaryInsuranceState>
+  <SecondaryInsuranceZIP>N/A 7</SecondaryInsuranceZIP>
+  <SecondaryInsuranceGroupNumber>N/A 8</SecondaryInsuranceGroupNumber>
+  <SecondaryInsurancePOC>N/A 9</SecondaryInsurancePOC>
+  <SecondaryInsurancePOCTitle>N/A 10</SecondaryInsurancePOCTitle>
+  <SecondaryInsurancePOCPhone>N/A 11</SecondaryInsurancePOCPhone>
+  <SecondaryInsuranceClaimNumber>N/A 12</SecondaryInsuranceClaimNumber>
+  <SecondaryInsuranceNotes>N/A 13</SecondaryInsuranceNotes>
+</NewPatient>
