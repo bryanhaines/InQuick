@@ -26,7 +26,7 @@
 
 > Unsure where to start? You can start by looking through the issues. The following links may help you to start: http://makeapullrequest.com/, http://www.firsttimersonly.com/, and [How to Contribute to an Open Source Project on GitHub](https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github).
 
->At this point, you're ready to make your changes! Feel free to ask for help; everyone is a beginner at first :smile_cat:
+>At this point, you're ready to make your changes! Feel free to ask for help; everyone is a beginner at first.
 
 >If a maintainer asks you to "rebase" your PR, they're saying that a lot of code has changed, and that you need to update your branch so it's easier to merge.
 
