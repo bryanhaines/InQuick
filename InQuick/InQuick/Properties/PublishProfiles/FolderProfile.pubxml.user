@@ -10,8 +10,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <_PublishTargetUrl>C:\Users\hainesb\Source\Repos\InQuick\InQuick\InQuick\bin\Release\PublishOutput</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Server=(localdb)\mssqllocaldb;Database=aspnet-InQuick-2e5b84f9-77bb-4d51-8baa-54a1abd4b655;Trusted_Connection=True;MultipleActiveResultSets=true</Value>
+    </DestinationConnectionStrings>
     <DestinationConnectionStrings Include="InQuickContext">
       <Value>Server=(localdb)\mssqllocaldb;Database=InQuickContext-9a174723-a1ea-468e-931c-23b9a9362aa0;Trusted_Connection=True;MultipleActiveResultSets=true</Value>
     </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="InQuick.Models.InQuickContext">
+      <Value>Server=(localdb)\mssqllocaldb;Database=InQuickContext-9a174723-a1ea-468e-931c-23b9a9362aa0;Trusted_Connection=True;MultipleActiveResultSets=true</Value>
+    </EFMigrations>
   </ItemGroup>
 </Project>
