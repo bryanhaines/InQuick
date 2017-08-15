@@ -71,11 +71,15 @@ a.btn-in-quick:visited {
     border: 5px solid red;
 }
 
-.btn-in-quick:hover {
-    color: white !important;
-    background-color: red;
-    font-weight: bold;
-    /*border: 5px solid white;*/
+    .btn-in-quick:hover {
+        color: white !important;
+        background-color: red;
+        font-weight: bold;
+        /*border: 5px solid white;*/
+    }
+
+.btn input[type=file] {
+    display: none;
 }
 
 ul.no-bullets {
@@ -153,10 +157,10 @@ textarea {
     border-radius: 10px;
 }
 
-.decorative-div > h3 {
-    font-weight: bold;
-    color: white;
-}
+    .decorative-div > h3 {
+        font-weight: bold;
+        color: white;
+    }
 
 .margin-15 {
     margin: 15px;
